@@ -1,0 +1,17 @@
+drop table TC_CODE if exists;
+create table TC_CODE
+(
+  CODE_ID      NUMBER(10) not null,
+  TYPE         NUMBER(4),
+  TYPE_NAME    VARCHAR2(100),
+  CODE_EN_DESC VARCHAR2(500),
+  CODE_CN_DESC VARCHAR2(500),
+  NUM          NUMBER(8),
+  STATUS       NUMBER(8),
+  CREATE_BY    VARCHAR2(20),
+  CREATE_DATE  DATE,
+  UPDATE_BY    VARCHAR2(20),
+  UPDATE_DATE  DATE,
+  ORG_CODE     VARCHAR2(100),
+  VALUE        VARCHAR2(100)
+);

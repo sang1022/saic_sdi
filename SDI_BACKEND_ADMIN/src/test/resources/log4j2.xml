@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- status="OFF"，可以去掉，它的含义为是否记录log4j2本身的event信息，默认是OFF -->
+<configuration>
+    <!--定义变量-->
+    <Properties>
+        <property name="file_name">/midware/logs/flag4admin/loggerFilter.log</property>
+        <property name="rolling_file_name">/midware/logs/flag4admin/loggerFilter-%i.log</property>
+        <property name="every_file_size">50M</property><!-- 日志切割的最小单位 -->
+        <property name="max_file_count">20</property>
+    </Properties>
+
+    <appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <SizeBasedTriggeringPolicy size="${every_file_size}" />
+            <DefaultRolloverStrategy max="${max_file_count}"/>
+            <!--<ThresholdFilter level="debug" onMatch="ACCEPT" />-->
+        </Console>
+
+        <RollingFile name="LoggerFilter" fileName="${file_name}" filePattern="${rolling_file_name}">
+            <ExtendedJsonLayout eventEol="true" compact="true" complete="false"  jsonAdapterClassName="com.sgm.dmsii.function.log.DefaultRiZhiYiJsonLogger"/>
+            <SizeBasedTriggeringPolicy size="${every_file_size}" />
+            <DefaultRolloverStrategy max="${max_file_count}"/>
+            <!--<ThresholdFilter level="debug" onMatch="ACCEPT"/>-->
+            <!--<ThresholdFilter level="${log.level}" onMatch="ACCEPT" />-->
+        </RollingFile>
+        
+        <RollingFile name="NormalLoggerFilter" fileName="${file_name}" filePattern="${rolling_file_name}">
+            <SizeBasedTriggeringPolicy size="${every_file_size}" />
+            <DefaultRolloverStrategy max="${max_file_count}"/>
+            <!--<ThresholdFilter level="debug" onMatch="ACCEPT"/>-->
+            <!--<ThresholdFilter level="${log.level}" onMatch="ACCEPT" />-->
+        </RollingFile>
+
+    </appenders>
+
+
+
+    <loggers>
+
+        <!--是否分离AOP的访问日志 同于统计？
+            目前日志易似乎存在问题（多条JSON日志无法切分），需要确认
+        -->
+
+        <logger name="com.sgm.dms.flag.common.config.BaseAspect" level="debug" additivity="false">
+            <!--Console用户本地开发方便定位问题，生产可注释  -->
+            <appender-ref ref="Console"/>
+        </logger>
+
+        <!--开发debug qa和pr info-->
+        <root level="info">
+            <!--Console用户本地开发方便定位问题，生产可注释  -->
+            <appender-ref ref="Console"/>
+        </root>
+    </loggers>
+
+</configuration>
+
