@@ -4,9 +4,9 @@ package com.saic.ndms.sdi.common.po;
 
 /**
 *
-* @author LiuJun
+* @author SANGDELIANG
 * @description ParameterPO
-* @date 2019年4月22日
+* @date 2020年4月22日
 */
 public class ParameterPO {
     private Long parameterId;

@@ -8,9 +8,9 @@ import com.saic.ndms.sdi.common.manage.ICommonModuleManage;
 
 /**
 *
-* @author LiuJun
+* @author SANGDELIANG
 * @description 公共服务manage实现类
-* @date 2019年6月10日
+* @date 2020年6月10日
 */
 @Service("commonModuleManage")
 @BaseTransaction

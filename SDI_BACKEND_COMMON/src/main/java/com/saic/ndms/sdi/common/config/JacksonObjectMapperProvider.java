@@ -10,9 +10,9 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 /**
 *
-* @author LiuJun
+* @author SANGDELIANG
 * @description JacksonObjectMapperProvider
-* @date 2019年4月22日
+* @date 2020年4月22日
 */
 @Provider
 public class JacksonObjectMapperProvider implements ContextResolver<ObjectMapper> {

@@ -3,9 +3,9 @@ package com.saic.ndms.sdi.common.constants;
 
 /**
 *
-* @author LiuJun
+* @author SANGDELIANG
 * @description 业务常量-例如tc_code相关定义
-* @date 2019年4月23日
+* @date 2020年4月23日
 */
 public class BusinessConstant {
 

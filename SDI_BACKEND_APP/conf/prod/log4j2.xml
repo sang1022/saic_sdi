@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- status="OFF"，可以去掉，它的含义为是否记录log4j2本身的event信息，默认是OFF -->
+<configuration >
+    <!--#PRD-->
+    <Properties>
+        <property name="file_name">/midware/app/logs/scs4appLog.log</property>
+        <property name="rolling_file_name">/midware/app/logs/scs4appLog-%i.log</property>
+        <property name="every_file_size">50M</property><!-- 日志切割的最小单位 -->
+        <property name="max_file_count">20</property>
+        <Property name="pattern">%d{yyyy-MM-dd HH:mm:ss,SSS} %5p %c{1}:%L - %m%n</Property>
+    </Properties>
+
+    <appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <SizeBasedTriggeringPolicy size="${every_file_size}" />
+            <DefaultRolloverStrategy max="${max_file_count}"/>
+            <PatternLayout pattern="${pattern}"/>
+        </Console>
+
+        <RollingFile name="LoggerFilter" fileName="${file_name}" filePattern="${rolling_file_name}">
+            <SizeBasedTriggeringPolicy size="${every_file_size}" />
+            <DefaultRolloverStrategy max="${max_file_count}"/>
+            <!--<ThresholdFilter level="debug" onMatch="ACCEPT"/>-->
+            <!--<ThresholdFilter level="${log.level}" onMatch="ACCEPT" />-->
+             <PatternLayout pattern="${pattern}"/>
+        </RollingFile>
+        
+        <RollingFile name="NormalLoggerFilter" fileName="${file_name}" filePattern="${rolling_file_name}">
+            <SizeBasedTriggeringPolicy size="${every_file_size}" />
+            <DefaultRolloverStrategy max="${max_file_count}"/>
+            <!--<ThresholdFilter level="debug" onMatch="ACCEPT"/>-->
+            <!--<ThresholdFilter level="${log.level}" onMatch="ACCEPT" />-->
+            <PatternLayout pattern="${pattern}"/>
+        </RollingFile>
+
+    </appenders>
+
+
+
+    <loggers>
+
+        <!--是否分离AOP的访问日志 同于统计？
+            目前日志易似乎存在问题（多条JSON日志无法切分），需要确认
+        -->
+
+		<logger name="org.apache.http">
+			<level value="info"/>
+		</logger>
+		
+        <!--开发debug qa和pr info-->
+        <root level="info">
+            <appender-ref ref="Console"/>
+            <appender-ref ref="NormalLoggerFilter"/>
+        </root>
+    </loggers>
+
+</configuration>

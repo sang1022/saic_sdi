@@ -3,9 +3,9 @@
 package com.saic.ndms.sdi.admin.config;
 
 /**
- * @author LiuJun 
+ * @author SANGDELIANG 
  * @description CommonAgentConstants
- * @date 2019年7月11日
+ * @date 2020年7月11日
  */
 public class CommonAdminConstants {
 

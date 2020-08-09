@@ -4,9 +4,9 @@ package com.saic.ndms.sdi.common.dto;
 
 /**
 *
-* @author LiuJun
+* @author SANGDELIANG
 * @description CodeDTO
-* @date 2019年8月20日
+* @date 2020年8月20日
 */
 public class CodeDTO {
     

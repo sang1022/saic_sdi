@@ -15,7 +15,7 @@
 *
 ----------------------------------------------------------------------------------
 *     Date       Who       Version     Comments
-* 1. 2020年8月9日    LiuJun    1.0
+* 1. 2020年8月9日    SANGDELIANG    1.0
 *
 *
 *
@@ -44,9 +44,9 @@ import com.saic.ndms.sdi.common.config.OKHttpRestTemplate;
 import com.saic.ndms.sdi.common.config.RemoteServiceConfig;
 
 /**
- * @author LiuJun 
+ * @author SANGDELIANG 
  * @description FlagAgentApplication
- * @date 2019年4月22日
+ * @date 2020年4月22日
  */
 @SpringBootApplication
 @MapperScan(basePackages = { "com.saic.ndms.sdi.admin.dao", "com.saic.ndms.sdi.common.dao" })

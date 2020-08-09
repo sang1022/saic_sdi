@@ -3,9 +3,9 @@ package com.saic.ndms.sdi.common.service;
 
 /**
 *
-* @author LiuJun
+* @author SANGDELIANG
 * @description 公共service接口
-* @date 2019年4月22日
+* @date 2020年4月22日
 */
 public interface ICommonService {
 

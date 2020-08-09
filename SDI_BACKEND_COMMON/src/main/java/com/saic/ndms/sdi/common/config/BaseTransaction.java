@@ -11,9 +11,9 @@ import org.springframework.transaction.annotation.Transactional;
 
 /**
 *
-* @author LiuJun
+* @author SANGDELIANG
 * @description 事务配置annotation
-* @date 2019年4月22日
+* @date 2020年4月22日
 */
 @Target({ElementType.METHOD, ElementType.TYPE})
 @Retention(RetentionPolicy.RUNTIME)

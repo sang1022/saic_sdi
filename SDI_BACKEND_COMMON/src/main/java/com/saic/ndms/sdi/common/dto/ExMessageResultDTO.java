@@ -5,7 +5,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /*
 *
-* @author liujun
+* @author SANGDELIANG
 * 返回消息封装对象
 * @date 2016年3月1日
 */

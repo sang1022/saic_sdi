@@ -29,9 +29,9 @@ import com.github.pagehelper.util.StringUtil;
 import com.saic.ndms.sdi.common.constants.ScsBizConstant;
 
 /**
- * @author LiuJun 
+ * @author SANGDELIANG 
  * @description 工具类
- * @date 2019年4月23日
+ * @date 2020年4月23日
  */
 public class CommonsUtils {
     
@@ -98,7 +98,7 @@ public class CommonsUtils {
     }
 
     /**
-     * @author LiuJun 是否数字校验
+     * @author SANGDELIANG 是否数字校验
      * @date 2018年8月15日
      * @param str
      * @param isIntegral
@@ -123,7 +123,7 @@ public class CommonsUtils {
     }
 
     /**
-     * @author LiuJun list批量操作拆分-指定数量级
+     * @author SANGDELIANG list批量操作拆分-指定数量级
      * @date 2018年9月26日
      * @param paramStringList
      * @return
@@ -211,7 +211,7 @@ public class CommonsUtils {
     /*
      * 解析EXCLE返回list数据
      * @author caoYong
-     * @date 2019年1月10日
+     * @date 2020年1月10日
      * @param sheet
      * @return
      */
@@ -314,9 +314,9 @@ public class CommonsUtils {
     
     /**
     *
-    * @author LiuJun
+    * @author SANGDELIANG
     * uuid生成
-    * @date 2019年7月10日
+    * @date 2020年7月10日
     * @return
     */
     public static String getUuid() {
@@ -325,7 +325,7 @@ public class CommonsUtils {
     
     
     /**
-     * @author LiuJun 自动创建文件
+     * @author SANGDELIANG 自动创建文件
      * @date 2018年8月20日
      * @param filePath
      * @param fileName
@@ -368,7 +368,7 @@ public class CommonsUtils {
     }
 
     /**
-     * @author LiuJun list批量操作拆分-每500与数据库交互一次
+     * @author SANGDELIANG list批量操作拆分-每500与数据库交互一次
      * @date 2018年8月27日
      * @param paramStringList
      * @return
@@ -427,9 +427,9 @@ public class CommonsUtils {
     
     /**
     *
-    * @author LiuJun
+    * @author SANGDELIANG
     * @description 表分数校验
-    * @date 2019年8月19日
+    * @date 2020年8月19日
     * @param str
     * @param isIntegral
     * @return
@@ -454,9 +454,9 @@ public class CommonsUtils {
     
     /**
     *
-    * @author LiuJun
+    * @author SANGDELIANG
     * @description 期数校验
-    * @date 2019年8月19日
+    * @date 2020年8月19日
     * @param str
     * @return
     */
@@ -479,7 +479,7 @@ public class CommonsUtils {
     /**
      * @author JI Ning
      * @description  导出共用校验
-     * @date 2019/8/21 20:30
+     * @date 2020/8/21 20:30
      * @param [obj]
      * @return java.lang.String
      **/
@@ -493,9 +493,9 @@ public class CommonsUtils {
     
     /**
     *
-    * @author LiuJun
+    * @author SANGDELIANG
     * @description 折扣率校验
-    * @date 2019年8月25日
+    * @date 2020年8月25日
     * @param str
     * @return
     */
@@ -855,9 +855,9 @@ public class CommonsUtils {
 	
     /**
     *
-    * @author LiuJun
+    * @author SANGDELIANG
     * @description 指定字符替换
-    * @date 2019年12月4日
+    * @date 2020年12月4日
     * @param str
     * @return
     * @throws PatternSyntaxException
@@ -873,9 +873,9 @@ public class CommonsUtils {
     
     /**
     *
-    * @author LiuJun
+    * @author SANGDELIANG
     * @description 是否包含特殊字符
-    * @date 2019年12月6日
+    * @date 2020年12月6日
     * @param str
     * @return
     */
@@ -894,9 +894,9 @@ public class CommonsUtils {
     
     /**
     *
-    * @author LiuJun
+    * @author SANGDELIANG
     * @description containsIgnoreCase
-    * @date 2019年12月4日
+    * @date 2020年12月4日
     * @param str
     * @param searchString
     * @return

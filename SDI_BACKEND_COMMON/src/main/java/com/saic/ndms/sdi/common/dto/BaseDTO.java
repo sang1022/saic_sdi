@@ -8,7 +8,7 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 
 /**
 *
-* @author LiuJun
+* @author SANGDELIANG
 * BaseDTO
 * @date 2018年3月29日
 */

@@ -5,15 +5,15 @@ import com.saic.ndms.sdi.common.config.JacksonObjectMapperProvider;
 import com.saic.ndms.sdi.common.resource.CommonModuleResource;
 
 /**
- * @author LiuJun 
+ * @author SANGDELIANG 
  * @description JerseyResourceConfig
- * @date 2019年4月22日
+ * @date 2020年4月22日
  */
 public class JerseyResourceConfig extends JerseyApplication {
 
     /**
-     * @author LiuJun
-     * @date 2019年4月22日 (non-Javadoc)
+     * @author SANGDELIANG
+     * @date 2020年4月22日 (non-Javadoc)
      * @see com.saic.ndms.sdi.admin.config.JerseyApplication#registerResource()
      */
     @Override

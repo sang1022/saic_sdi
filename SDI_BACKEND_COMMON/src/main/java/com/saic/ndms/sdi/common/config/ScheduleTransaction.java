@@ -4,7 +4,7 @@ package com.saic.ndms.sdi.common.config;
 
 /**
 *
-* @author LiuJun
+* @author SANGDELIANG
 * @description ScheduleTransaction
 * @date 2018年11月14日
 */

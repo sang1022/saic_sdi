@@ -1,0 +1,68 @@
+#DEFAULT
+server: 
+  servlet:
+    context-path: /sdi4app
+  port: 8082
+    
+management:
+  health:
+    mail:
+      enabled: false
+  endpoints:
+    web:
+      base-path: /
+      exposure:
+        include: ["*"]
+        
+info:
+   app:
+     version: v2.0.0
+     name: sdi4app    
+     
+#mybatis
+mybatis:
+  #type-aliases-package: com.sgm.dms.partstock.backend.vo
+  mapper-locations: classpath:dao/**/*.xml,classpath*:dao/**/*.xml
+ 
+  configuration:
+    lazy-loading-enabled: false
+    aggressive-lazy-loading: false
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+#page helper
+pagehelper:
+  helperDialect: oracle
+  reasonable: false
+  supportMethodsArguments: true
+  closeConn: true
+  pageSizeZero: true
+
+#db
+spring:
+  datasource:
+    driver-class-name: org.h2.Driver
+    #，每次启动程序，程序都会运行schema.sql文件，对数据库的数据操作
+    schema: classpath:db/schema.sql 
+    #，每次启动程序，程序都会运行data.sql文件，对数据库的数据操作
+    data: classpath:db/data.sql 
+    #配置h2数据库的连接地址,http://localhost:8082/sdi4app/h2-console
+    url: jdbc:h2:mem:test;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    username: sa
+    password: sa
+  h2:
+    console:
+      settings:
+        web-allow-other: true
+        trace: true
+      path: /h2-console
+      enabled: true #开启web console功能
+
+logging:
+  config: classpath:log4j2.xml
+
+okhttp3:
+  connectTimeout: 60000
+  readTimeout: 60000
+  writeTimeout: 60000
+  maxIdleConnections: 60
+  keepAliveDuration: 60000

@@ -1,0 +1,59 @@
+#QA
+server: 
+  servlet:
+    context-path: /scs4app
+  port: 8082
+    
+management:
+  health:
+    mail:
+      enabled: false
+  endpoints:
+    web:
+      base-path: /sysInfo
+      exposure:
+        include: ["*"]
+        
+info:
+   app:
+     version: v2.0.0
+     name: scs4app  
+     
+#mybatis
+mybatis:
+  mapper-locations: classpath:mapper/**/*.xml,classpath*:mapper/**/*.xml
+ 
+  configuration:
+    lazy-loading-enabled: false
+    aggressive-lazy-loading: false
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+#page helper
+pagehelper:
+  helperDialect: oracle
+  reasonable: false
+  supportMethodsArguments: true
+  closeConn: true
+  pageSizeZero: true
+  
+#db-UAT
+spring:
+  datasource:
+        url: jdbc:oracle:thin:@10.203.121.197:1521/SCS5050.SGM.COM
+        username: OWSCS5050
+        password: BEfq2uYZ
+        driverClassName: oracle.jdbc.driver.OracleDriver
+
+logging:
+  config: classpath:log4j2.xml
+
+
+#okhttp
+okhttp3:
+  connectTimeout: 60000
+  readTimeout: 60000
+  writeTimeout: 60000
+  maxIdleConnections: 60
+  keepAliveDuration: 60000
+  
+  

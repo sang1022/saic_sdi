@@ -2,9 +2,9 @@
 package com.saic.ndms.sdi.common.exception;
 
 /**
- * @author LiuJun
+ * @author SANGDELIANG
  * @description 异常状态定义
- * @date 2019年4月23日
+ * @date 2020年4月23日
  */
 public enum ErrorStatus {
 

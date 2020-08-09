@@ -9,13 +9,13 @@
 *
 * @File name : CommonAgentUtils.java
 *
-* @Author : LiuJun
+* @Author : SANGDELIANG
 *
 * @Date : 2019年7月11日
 *
 ----------------------------------------------------------------------------------
 *     Date       Who       Version     Comments
-* 1. 2019年7月11日    LiuJun    1.0
+* 1. 2019年7月11日    SANGDELIANG    1.0
 *
 *
 *
@@ -31,9 +31,9 @@ import com.saic.ndms.sdi.admin.dto.ResultMessageDTO;
 import com.saic.ndms.sdi.common.utils.SerializeUtils;
 
 /**
- * @author LiuJun 
+ * @author SANGDELIANG 
  * @description CommonAgentUtils
- * @date 2019年7月11日
+ * @date 2020年7月11日
  */
 public class CommonAdminUtils {
     
@@ -65,7 +65,7 @@ public class CommonAdminUtils {
     *
     * @author 
     * @description esb返回结果
-    * @date 2019年7月11日
+    * @date 2020年7月11日
     * @param code
     * @param msg
     * @return

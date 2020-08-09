@@ -7,9 +7,9 @@ import com.saic.ndms.sdi.common.config.BaseTransaction;
 import com.saic.ndms.sdi.common.service.ICommonService;
 
 /**
- * @author LiuJun 
+ * @author SANGDELIANG 
  * @description 公共service实现类
- * @date 2019年4月22日
+ * @date 2020年4月22日
  */
 @Service("commonService")
 @BaseTransaction

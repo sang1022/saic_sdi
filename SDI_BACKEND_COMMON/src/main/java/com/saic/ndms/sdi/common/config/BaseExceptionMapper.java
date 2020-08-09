@@ -21,9 +21,9 @@ import com.saic.ndms.sdi.common.utils.StringUtils;
 
 /**
 *
-* @author LiuJun
+* @author SANGDELIANG
 * @description 公共异常处理类
-* @date 2019年4月22日
+* @date 2020年4月22日
 */
 public class BaseExceptionMapper implements ExceptionMapper<Exception> {
     private Log logger= LogFactory.getLog(BaseExceptionMapper.class);
@@ -32,8 +32,8 @@ public class BaseExceptionMapper implements ExceptionMapper<Exception> {
 
     /**
     *
-    * @author LiuJun
-    * @date 2019年4月22日
+    * @author SANGDELIANG
+    * @date 2020年4月22日
     * @param exception
     * @return
     * (non-Javadoc)

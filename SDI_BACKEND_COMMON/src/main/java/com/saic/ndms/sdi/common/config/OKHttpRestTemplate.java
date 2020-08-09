@@ -20,9 +20,9 @@ import okhttp3.OkHttpClient;
 
 /**
 *
-* @author LiuJun
+* @author SANGDELIANG
 * @description OKHttpRestTemplate
-* @date 2019年4月22日
+* @date 2020年4月22日
 */
 public class OKHttpRestTemplate {
 

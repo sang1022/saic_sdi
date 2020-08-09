@@ -9,13 +9,13 @@
 *
 * @File name : DateUtil.java
 *
-* @Author : LiuJun
+* @Author : SANGDELIANG
 *
 * @Date : 2019年4月23日
 *
 ----------------------------------------------------------------------------------
 *     Date       Who       Version     Comments
-* 1. 2019年4月23日    LiuJun    1.0
+* 1. 2019年4月23日    SANGDELIANG    1.0
 *
 *
 *
@@ -34,9 +34,9 @@ import org.apache.commons.logging.LogFactory;
 
 /**
 *
-* @author LiuJun
+* @author SANGDELIANG
 * @description 时间相关工具类
-* @date 2019年4月23日
+* @date 2020年4月23日
 */
 public class DateUtil {
     
@@ -52,7 +52,7 @@ public class DateUtil {
     *
     * @author
     * @description 以指定的格式来格式化日期
-    * @date 2019年4月23日
+    * @date 2020年4月23日
     * @param date
     * @param format
     * @return
@@ -74,7 +74,7 @@ public class DateUtil {
     *
     * @author
     * @description 字符串格式化为日期
-    * @date 2019年4月23日
+    * @date 2020年4月23日
     * @param str
     * @param format
     * @return

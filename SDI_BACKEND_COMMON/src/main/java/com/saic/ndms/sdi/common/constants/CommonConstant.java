@@ -2,9 +2,9 @@
 package com.saic.ndms.sdi.common.constants;
 
 /**
- * @author LiuJun 
+ * @author SANGDELIANG 
  * @description 常量类
- * @date 2019年4月22日
+ * @date 2020年4月22日
  */
 public class CommonConstant {
 
@@ -652,7 +652,7 @@ public class CommonConstant {
 
     /*
      * @author Ji Ning
-     * @date 2019/6/13 20:13
+     * @date 2020/6/13 20:13
      * @description 产品延期操作类型
      * @param
      * @return

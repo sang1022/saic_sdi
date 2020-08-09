@@ -7,9 +7,9 @@ import org.springframework.stereotype.Component;
 
 /**
 *
-* @author LiuJun
+* @author SANGDELIANG
 * @description 公共组件resource
-* @date 2019年4月22日
+* @date 2020年4月22日
 */
 @Path("/common")
 @Component

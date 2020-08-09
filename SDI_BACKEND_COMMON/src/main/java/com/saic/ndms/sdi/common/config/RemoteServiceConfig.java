@@ -6,9 +6,9 @@ import org.springframework.stereotype.Component;
 
 /**
 *
-* @author LiuJun
+* @author SANGDELIANG
 * @description RemoteServiceConfig
-* @date 2019年4月22日
+* @date 2020年4月22日
 */
 @Component
 @ConfigurationProperties(prefix="okhttp3")

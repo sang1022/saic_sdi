@@ -9,13 +9,13 @@
  *
  * @File name : ProcessConstant.java
  *
- * @Author : LiuJun
+ * @Author : SANGDELIANG
  *
  * @Date : 2017年10月16日
  *
 ----------------------------------------------------------------------------------
  *     Date       Who       Version     Comments
- * 1. 2017年10月16日    LiuJun    1.0
+ * 1. 2017年10月16日    SANGDELIANG    1.0
  *
  *
  *
@@ -27,7 +27,7 @@ package com.saic.ndms.sdi.common.constants;
 
 /**
  *
- * @author LiuJun 
+ * @author SANGDELIANG 
  * @description 流程定义相关常量
  * @date 2017年10月16日
  */
@@ -526,7 +526,7 @@ public class ProcessConstant {
 	/**
 	 * @author JI Ning
 	 * @description  员工车审批节点定义
-	 * @date 2019/9/3 22:17
+	 * @date 2020/9/3 22:17
 	 */
 	public static final String SELF_DATE_CHANGE_CODE = "LE_2002_1009";
 

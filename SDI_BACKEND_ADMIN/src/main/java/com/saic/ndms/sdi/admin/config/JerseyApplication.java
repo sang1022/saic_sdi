@@ -9,9 +9,9 @@ import org.glassfish.jersey.server.ServerProperties;
 import com.saic.ndms.sdi.common.config.BaseExceptionMapper;
 
 /**
- * @author LiuJun 
+ * @author SANGDELIANG 
  * @description JerseyApplication
- * @date 2019年4月22日
+ * @date 2020年4月22日
  */
 public abstract class JerseyApplication extends ResourceConfig {
 

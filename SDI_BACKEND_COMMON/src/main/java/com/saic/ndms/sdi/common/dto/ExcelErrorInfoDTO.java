@@ -4,9 +4,9 @@ package com.saic.ndms.sdi.common.dto;
 
 /**
 *
-* @author LiuJun
+* @author SANGDELIANG
 * @description 记录导入时校验的错误提示信息
-* @date 2019年8月16日
+* @date 2020年8月16日
 */
 public class ExcelErrorInfoDTO {
     public  ExcelErrorInfoDTO(){}

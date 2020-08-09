@@ -5,7 +5,7 @@ import java.io.Serializable;
 
 /**
 *
-* @author LiuJun
+* @author SANGDELIANG
 * 系统异常DTO
 * @date 2017年12月13日
 */
