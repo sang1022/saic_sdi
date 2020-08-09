@@ -21,8 +21,12 @@
 			<artifactId>sdi.common</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
-
-
+ 		<!-- nacos客户端依赖 -->
+		<dependency>
+			<groupId>com.alibaba.cloud</groupId>
+			<artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+			<version>${spring-cloud-alibaba.version}</version>
+		</dependency>
 	</dependencies>
 
 	<profiles>

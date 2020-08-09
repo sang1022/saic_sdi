@@ -37,48 +37,5 @@ import com.saic.ndms.sdi.common.utils.SerializeUtils;
  */
 public class AppCommonUtils {
     
-    public static final String APPLICATION_JSON_UTF8 = "application/json;charset=UTF-8";
-
-
-    /**
-     * @description 描述:java对象返回Json格式错误消息
-     * 
-     * @return
-     */
-    public static String getJsonMessage(String code, String msg) {
-        ResultMessageDTO errorMsgVO = new ResultMessageDTO();
-        errorMsgVO.setCode(code);
-        errorMsgVO.setMsg(msg);
-        return SerializeUtils.serialize(errorMsgVO);
-    }
-
-    /**
-     * @description 描述:java对象返回Json格式错误消息
-     * @return
-     */
-    public static String getJsonMessage(int code, String msg) {
-        return getJsonMessage(String.valueOf(code), msg);
-    }
-    
-    
-    /**
-    *
-    * @author 
-    * @description esb返回结果
-    * @date 2020年7月11日
-    * @param code
-    * @param msg
-    * @return
-    */
-    public static Response setEsbResult(int code, String msg){
-        ResultMessageDTO resultMessageDTO = new ResultMessageDTO();
-        resultMessageDTO.setCode(String.valueOf(code));
-        resultMessageDTO.setMsg(msg);
-        
-        return Response.status(code).entity(resultMessageDTO).type(APPLICATION_JSON_UTF8).build();
-
-    }
-    
-   
 
 }

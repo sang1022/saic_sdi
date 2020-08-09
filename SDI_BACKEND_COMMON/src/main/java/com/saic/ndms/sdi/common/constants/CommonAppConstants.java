@@ -1,13 +1,13 @@
 
 
-package com.saic.ndms.sdi.admin.config;
+package com.saic.ndms.sdi.common.constants;
 
 /**
  * @author SANGDELIANG 
  * @description CommonAgentConstants
  * @date 2020年7月11日
  */
-public class CommonAdminConstants {
+public class CommonAppConstants {
 
     public static final int HTTP_RESPONSE_SUCCESS = 200;
 

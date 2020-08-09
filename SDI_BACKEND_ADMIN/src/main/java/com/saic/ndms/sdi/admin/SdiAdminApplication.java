@@ -27,21 +27,15 @@ package com.saic.ndms.sdi.admin;
 
 import javax.sql.DataSource;
 
-import org.glassfish.jersey.servlet.ServletContainer;
-import org.glassfish.jersey.servlet.ServletProperties;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.context.annotation.Bean;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
-
-import com.saic.ndms.sdi.admin.config.JerseyResourceConfig;
-import com.saic.ndms.sdi.common.config.OKHttpRestTemplate;
-import com.saic.ndms.sdi.common.config.RemoteServiceConfig;
 
 /**
  * @author SANGDELIANG 
@@ -51,7 +45,8 @@ import com.saic.ndms.sdi.common.config.RemoteServiceConfig;
 @SpringBootApplication
 @MapperScan(basePackages = { "com.saic.ndms.sdi.admin.dao", "com.saic.ndms.sdi.common.dao" })
 @EnableTransactionManagement
-public class ScsAdminApplication extends SpringBootServletInitializer {
+@EnableDiscoveryClient	//打开注册服务发现
+public class SdiAdminApplication extends SpringBootServletInitializer {
     
     public static final String APP="sdi4admin";
 
@@ -59,7 +54,7 @@ public class ScsAdminApplication extends SpringBootServletInitializer {
 
 
     public static void main(String[] args) {
-        SpringApplication.run(ScsAdminApplication.class, args);
+        SpringApplication.run(SdiAdminApplication.class, args);
     }
 
     @Bean("txm")
@@ -81,15 +76,6 @@ public class ScsAdminApplication extends SpringBootServletInitializer {
 //    }
 
 
-
-    @Bean
-    public ServletRegistrationBean jerseyServlet() {
-        String[] parmaRestAttr = {"/rest/*","/api/*"};
-        ServletRegistrationBean registration = new ServletRegistrationBean(new ServletContainer(), parmaRestAttr) ;
-        // our rest resources will be available in the path /jersey/*
-        registration.addInitParameter(ServletProperties.JAXRS_APPLICATION_CLASS, JerseyResourceConfig.class.getName());
-        return registration;
-    }
 //
 //    @Bean
 //    public OKHttpRestTemplate OKHttpRestTemplate(RemoteServiceConfig remoteServiceConfig) {

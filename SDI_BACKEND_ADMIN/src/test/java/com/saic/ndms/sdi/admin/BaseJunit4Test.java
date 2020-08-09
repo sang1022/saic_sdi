@@ -19,7 +19,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 * @date 2020年3月19日
 */
 @RunWith(SpringJUnit4ClassRunner.class)
-@SpringBootTest(classes = ScsAdminApplication.class,webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+@SpringBootTest(classes = SdiAdminApplication.class,webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @DirtiesContext(methodMode  = DirtiesContext.MethodMode.BEFORE_METHOD)
 @ActiveProfiles("test")
 @Ignore

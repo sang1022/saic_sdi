@@ -23,11 +23,11 @@
 ----------------------------------------------------------------------------------
 */
 
-package com.saic.ndms.sdi.admin.utils;
+package com.saic.ndms.sdi.client.utils;
 
 import javax.ws.rs.core.Response;
 
-import com.saic.ndms.sdi.admin.dto.ResultMessageDTO;
+import com.saic.ndms.sdi.client.dto.ResultMessageDTO;
 import com.saic.ndms.sdi.common.utils.SerializeUtils;
 
 /**
@@ -35,6 +35,7 @@ import com.saic.ndms.sdi.common.utils.SerializeUtils;
  * @description CommonAgentUtils
  * @date 2020年7月11日
  */
-public class CommonAdminUtils {
+public class ClientCommonUtils {
     
+
 }
