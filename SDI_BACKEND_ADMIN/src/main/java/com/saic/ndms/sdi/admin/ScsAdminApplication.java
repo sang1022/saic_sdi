@@ -6,16 +6,16 @@
 * distribution in the LICENSE.txt file.
 *
 * @Project Name : flag-agent
-*
+* 用来为将来的管理员管理，计划任务执行，MQ接入
 * @File name : FlagAgentApplication.java
 *
-* @Author : LiuJun
+* @Author : sangdeliang
 *
-* @Date : 2019年4月22日
+* @Date : 2020年8月9日
 *
 ----------------------------------------------------------------------------------
 *     Date       Who       Version     Comments
-* 1. 2019年4月22日    LiuJun    1.0
+* 1. 2020年8月9日    LiuJun    1.0
 *
 *
 *
