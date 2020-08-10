@@ -62,7 +62,12 @@ spring:
   cloud:
     nacos:
       discovery:
-        server-addr: 119.45.201.252:8849
+        server-addr: 119.45.201.252:8850
+    sentinel:
+      transport:
+        port: 7000	#和控制台交流的端口，随意指定一个
+        dashboard: 119.45.201.252:7999	#控制台服务的端口
+
 logging:
   config: classpath:log4j2.xml
 

@@ -39,11 +39,11 @@
 
     <loggers>
 		<logger name="org.apache.http">
-			<level value="info"/>
+			<level value="debug"/>
 		</logger>
 		
         <!--开发debug qa和pr info-->
-        <root level="info">
+        <root level="debug">
             <appender-ref ref="Console"/>
             <appender-ref ref="NormalLoggerFilter"/>
         </root>

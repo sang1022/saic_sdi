@@ -33,12 +33,14 @@ public class SupplierProviderController {
 	@Autowired
 	private IMdmSupplierService mdmSupplierService;
 	
+	//@SentinelResource(value = "test",blockHandler = "exceptionHandler")
 	@RequestMapping(value="/test", method=RequestMethod.GET, produces="application/json;charset=UTF-8")
     public String test(HttpServletRequest request,HttpServletResponse response) {
         return "hello beauty sdi system";
 
     }
 	
+	//@SentinelResource(value = "mergeSupplierInfo",blockHandler = "exceptionHandler")
 	@RequestMapping(value="/supplier/{remark}", method=RequestMethod.POST, produces="application/json;charset=UTF-8")
     public @ResponseBody ResultMessageDTO  mergeSupplierInfo(@RequestBody MdmSupplierReqDTO supplierDTO,
     		@PathVariable String remark,
