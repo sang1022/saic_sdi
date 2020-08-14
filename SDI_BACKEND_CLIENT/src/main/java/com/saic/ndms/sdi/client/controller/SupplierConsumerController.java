@@ -43,6 +43,27 @@ public class SupplierConsumerController {
 	@Autowired
 	private FeignSdiAdminService feignSdiAdminService;
 	
+
+    @RequestMapping("/gateway1/demo1")
+    public String demo1() {
+        return "demo1";
+    }
+
+    @RequestMapping("/gateway1/demo2")
+    public String demo2() {
+        return "demo1";
+    }
+
+    @RequestMapping("/gateway2/demo1")
+    public String demo3() {
+        return "demo1";
+    }
+
+    @RequestMapping("/gateway2/demo2")
+    public String demo4() {
+        return "demo1";
+    }
+	
 	@RequestMapping(value="/test", method=RequestMethod.GET, produces="application/json;charset=UTF-8")
     public String test(HttpServletRequest request,HttpServletResponse response) {
         return "hello beauty sdi system for client";

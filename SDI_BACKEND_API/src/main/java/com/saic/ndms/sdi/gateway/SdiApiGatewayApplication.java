@@ -5,8 +5,6 @@
 * License version 1.0, a copy of which has been included with this
 * distribution in the LICENSE.txt file.
 *
-* @Project Name : flag-agent
-* 用来为将来的管理员管理，计划任务执行，MQ接入
 * @File name : FlagAgentApplication.java
 *
 * @Author : sangdeliang
@@ -23,21 +21,18 @@
 ----------------------------------------------------------------------------------
 */
 
-package com.saic.ndms.sdi.client;
+package com.saic.ndms.sdi.gateway;
 
 import javax.sql.DataSource;
 
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
-import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.Bean;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
-import org.springframework.web.client.RestTemplate;
 
 /**
  * @author SANGDELIANG 
@@ -45,29 +40,24 @@ import org.springframework.web.client.RestTemplate;
  * @date 2020年4月22日
  */
 @SpringBootApplication
-@MapperScan(basePackages = { "com.saic.ndms.sdi.client.dao", "com.saic.ndms.sdi.client.dao" })
+@MapperScan(basePackages = { "com.saic.ndms.sdi.gateway.dao", "com.saic.ndms.sdi.gateway.dao" })
 @EnableTransactionManagement
-@EnableDiscoveryClient	//打开注册服务发现
-@EnableFeignClients //打开Feigin
-public class SdiClientApplication extends SpringBootServletInitializer {
+@EnableDiscoveryClient
+public class SdiApiGatewayApplication {
     
-    public static final String APP="sdi4client";
+    public static final String APP="sdi4gateway";
 
     public static final String PORTAL="https://dp.saic.com/dp";
 
 
     public static void main(String[] args) {
-        SpringApplication.run(SdiClientApplication.class, args);
+        SpringApplication.run(SdiApiGatewayApplication.class, args);
     }
 
     @Bean("txm")
     public PlatformTransactionManager transactionManager(DataSource datasource) {
         return new DataSourceTransactionManager(datasource);
     }
-
-    @Bean
-    public RestTemplate restTemplate() {
-    	return new RestTemplate();
-    }
+    
 
 }

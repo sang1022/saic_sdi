@@ -1,8 +1,8 @@
 #DEFAULT
 server: 
   servlet:
-    context-path: /sdi4admin
-  port: 8081
+    context-path: /sdi4gateway
+  port: 7000
     
 management:
   health:
@@ -17,7 +17,7 @@ management:
 info:
    app:
      version: v2.0.0
-     name: sdi4admin     
+     name: sdi4api     
      
 #mybatis
 mybatis:
@@ -41,32 +41,33 @@ pagehelper:
 spring:
   application:
     #这个必须要，服务注册的时候，使用的是这个名
-    name: sdi4admin
-  datasource:
-    driver-class-name: org.h2.Driver
-    #，每次启动程序，程序都会运行schema.sql文件，对数据库的数据操作
-    schema: classpath:db/schema.sql 
-    #，每次启动程序，程序都会运行data.sql文件，对数据库的数据操作
-    data: classpath:db/data.sql 
-    #配置h2数据库的连接地址,http://localhost:8081/sdi4admin/h2-console
-    url: jdbc:h2:mem:test;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
-    username: sa
-    password: sa
-  h2:
-    console:
-      settings:
-        web-allow-other: true
-        trace: true
-      path: /h2-console
-      enabled: true #开启web console功能
+    name: sdi4gateway
   cloud:
     nacos:
       discovery:
         server-addr: 119.45.201.252:8850
-    sentinel:
-      transport:
-        port: 7888	#和控制台交流的端口，随意指定一个
-        dashboard: 119.45.201.252:7999	#控制台服务的端口
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: client_route
+          uri: lb://sdi4client
+          order: 1
+          predicates:
+            - Path=/client_server/**
+            - Before= 2099-11-28T00:00:00.000+08:00
+            - Demo= 1, 100
+          filters:
+            - StripPrefix= 1
+            - Log= true, true
+        - id: admin_route
+          uri: lb://sdi4admin
+          order: 1
+          predicates:
+            - Path=/admin_server/**
+          filters:
+            - StripPrefix=1
 
 logging:
   config: classpath:log4j2.xml

@@ -1,0 +1,53 @@
+#DEV
+server: 
+    context-path: /scs4admin
+    port: 8081
+    
+management:
+    contextPath: /sysInfo
+    security:
+      enabled: false
+
+info:
+   app:
+     version: v0.01
+     name: scs4admin    
+     
+#mybatis
+mybatis:
+  mapper-locations: classpath:mapper/**/*.xml,classpath*:mapper/**/*.xml
+ 
+  configuration:
+    lazy-loading-enabled: false
+    aggressive-lazy-loading: false
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+#page helper
+pagehelper:
+  helperDialect: oracle
+  reasonable: false
+  supportMethodsArguments: true
+  closeConn: true
+  pageSizeZero: true
+  
+#db-xingneng
+spring:
+  datasource:
+        url: jdbc:oracle:thin:@10.203.121.168:1521/SCS5050.SGM.COM
+        username: OWSCS5050
+        password: CYDfih09
+        driverClassName: oracle.jdbc.driver.OracleDriver
+        
+logging:
+  config: classpath:log4j2.xml
+
+
+#okhttp
+okhttp3:
+  connectTimeout: 60000
+  readTimeout: 60000
+  writeTimeout: 60000
+  maxIdleConnections: 60
+  keepAliveDuration: 60000
+  
+  

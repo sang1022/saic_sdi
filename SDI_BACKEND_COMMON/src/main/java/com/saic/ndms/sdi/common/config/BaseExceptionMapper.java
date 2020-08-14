@@ -11,7 +11,6 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
 import com.fasterxml.jackson.core.JsonParseException;
-import com.fasterxml.jackson.databind.JsonMappingException;
 import com.saic.ndms.sdi.common.dto.ExMessageResultDTO;
 import com.saic.ndms.sdi.common.exception.AuthException;
 import com.saic.ndms.sdi.common.exception.CodeAuthException;
@@ -49,9 +48,6 @@ public class BaseExceptionMapper implements ExceptionMapper<Exception> {
     protected ExMessageResultDTO createExMessageResultDTO(Exception ex) {
         ExMessageResultDTO dto = null;
         if (ex instanceof JsonParseException) {
-            dto = new ExMessageResultDTO(true,Status.BAD_REQUEST.getStatusCode(), "0",
-                    this.getStackMessage(ex), ex);
-        } else if (ex instanceof JsonMappingException) {
             dto = new ExMessageResultDTO(true,Status.BAD_REQUEST.getStatusCode(), "0",
                     this.getStackMessage(ex), ex);
         } else if (ex instanceof ScsBizException) {
