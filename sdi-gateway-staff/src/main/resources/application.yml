@@ -1,8 +1,8 @@
 #DEFAULT
 server: 
   servlet:
-    context-path: /sdi4dealerGateway
-  port: 7000
+    context-path: /sdi4staffGateway
+  port: 7001
     
 management:
   health:
@@ -41,7 +41,7 @@ pagehelper:
 spring:
   application:
     #这个必须要，服务注册的时候，使用的是这个名
-    name: sdi-gateway-dealer
+    name: sdi-gateway-staff
   cloud:
     nacos:
       discovery:

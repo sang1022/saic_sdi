@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.saic.ndms.sdi.app.dao.MdmSupplierDao" >
-	<update id="mergeSupplierInfo"	parameterType="com.saic.ndms.sdi.app.po.MdmSupplierPO">
+<mapper namespace="com.saic.ndms.sdi.diagnose.dao.MdmSupplierDao" >
+	<update id="mergeSupplierInfo"	parameterType="com.saic.ndms.sdi.diagnose.po.MdmSupplierPO">
 		INSERT INTO TM_SUPPLIER  (SUPPLIER_ID, SUPPLIER_DUNS, SUPPLIER_NAME) VALUES (#{supplierId}, #{supplierDuns}, #{supplierName})
 	</update>
 

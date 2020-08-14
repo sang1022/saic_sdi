@@ -1,8 +1,8 @@
 #DEFAULT
 server: 
   servlet:
-    context-path: /sdi4maindata
-  port: 8083
+    context-path: /sdi4report
+  port: 8084
     
 management:
   health:
@@ -17,7 +17,7 @@ management:
 info:
    app:
      version: v2.0.0
-     name: sdi4maindata   
+     name: sdi4report   
      
 #mybatis
 mybatis:
@@ -41,7 +41,7 @@ pagehelper:
 spring:
   application:
     #这个必须要，服务注册的时候，使用的是这个名
-    name: sdi-service-maindata
+    name: sdi-service-report
   datasource:
     driver-class-name: org.h2.Driver
     #，每次启动程序，程序都会运行schema.sql文件，对数据库的数据操作
