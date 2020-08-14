@@ -5,12 +5,17 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.saic.ndms.sdi</groupId>
-    <artifactId>sdi.parent</artifactId>
+    <artifactId>sdi-parent</artifactId>
     <packaging>pom</packaging>
     <version>0.0.1-SNAPSHOT</version>
     <modules>
-        <module>sdi.common</module>
-        <module>sdi.admin</module>
+	    <module>sdi-gateway-dealer</module>
+		<module>sdi-gateway-staff</module>
+        <module>sdi-common</module>
+        <module>sdi-service-admin</module>
+        <module>sdi-service-diagnose</module>
+		<module>sdi-service-report</module>
+		<module>sdi-service-maindata</module>
     </modules>
 
     <!--父工程-->

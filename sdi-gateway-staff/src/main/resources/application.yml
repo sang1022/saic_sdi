@@ -1,0 +1,80 @@
+#DEFAULT
+server: 
+  servlet:
+    context-path: /sdi4dealerGateway
+  port: 7000
+    
+management:
+  health:
+    mail:
+      enabled: false
+  endpoints:
+    web:
+      base-path: /
+      exposure:
+        include: ["*"]
+        
+info:
+   app:
+     version: v2.0.0
+     name: sdi4dealerGateway     
+     
+#mybatis
+mybatis:
+  #type-aliases-package: com.sgm.dms.partstock.backend.vo
+  mapper-locations: classpath:dao/**/*.xml,classpath*:dao/**/*.xml
+ 
+  configuration:
+    lazy-loading-enabled: false
+    aggressive-lazy-loading: false
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+#page helper
+pagehelper:
+  helperDialect: oracle
+  reasonable: false
+  supportMethodsArguments: true
+  closeConn: true
+  pageSizeZero: true
+
+#db
+spring:
+  application:
+    #这个必须要，服务注册的时候，使用的是这个名
+    name: sdi-gateway-dealer
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 119.45.201.252:8850
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: client_route
+          uri: lb://sdi4maindata
+          order: 1
+          predicates:
+            - Path=/sdi-service-manadata/**
+            - Before= 2099-11-28T00:00:00.000+08:00
+            - Demo= 1, 100
+          filters:
+            - StripPrefix= 1
+            - Log= true, true
+        - id: admin_route
+          uri: lb://sdi4admin
+          order: 1
+          predicates:
+            - Path=/sdi-service-admin/**
+          filters:
+            - StripPrefix=1
+
+logging:
+  config: classpath:log4j2.xml
+
+okhttp3:
+  connectTimeout: 60000
+  readTimeout: 60000
+  writeTimeout: 60000
+  maxIdleConnections: 60
+  keepAliveDuration: 60000

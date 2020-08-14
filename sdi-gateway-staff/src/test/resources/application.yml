@@ -1,0 +1,70 @@
+#DEFAULT
+server: 
+  servlet:
+    context-path: /sdi4api
+  port: 7000
+    
+management:
+  health:
+    mail:
+      enabled: false
+  endpoints:
+    web:
+      base-path: /
+      exposure:
+        include: ["*"]
+        
+info:
+   app:
+     version: v2.0.0
+     name: sdi4api     
+     
+#mybatis
+mybatis:
+  #type-aliases-package: com.sgm.dms.partstock.backend.vo
+  mapper-locations: classpath:dao/**/*.xml,classpath*:dao/**/*.xml
+ 
+  configuration:
+    lazy-loading-enabled: false
+    aggressive-lazy-loading: false
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+#page helper
+pagehelper:
+  helperDialect: oracle
+  reasonable: false
+  supportMethodsArguments: true
+  closeConn: true
+  pageSizeZero: true
+
+#db
+spring:
+  application:
+    #这个必须要，服务注册的时候，使用的是这个名
+    name: sdi4api
+  cloud:
+    gateway:
+      routes:
+        - id: client_route
+          uri: http://localhost:8083
+          order: 1
+          predicates:
+            - Path=/sdi4client/**
+          filters:
+            - StripPrefix=1
+        - id: admin_route
+          uri: http://localhost:8081
+          order: 1
+          predicates:
+            - Path=/sdi4admin/**
+          filters:
+            - StripPrefix=1
+logging:
+  config: classpath:log4j2.xml
+
+okhttp3:
+  connectTimeout: 60000
+  readTimeout: 60000
+  writeTimeout: 60000
+  maxIdleConnections: 60
+  keepAliveDuration: 60000
